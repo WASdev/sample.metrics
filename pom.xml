@@ -37,6 +37,14 @@
 					<target>1.8</target>
 				</configuration>
 			</plugin>
+			<plugin>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.1.0</version>
+				<configuration>
+					<warName>MetricsExample</warName>
+					<outputDirectory>config/liberty</outputDirectory>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
 </project>
