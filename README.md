@@ -9,7 +9,7 @@ Use the following steps to build the sample application with Maven:
 
 1. Clone the sample.metrics repository.
 
-2. Execute the full Maven build. This will create a MetricsExample.war file inside the project's target directory.
+2. Execute the full Maven build. This will create a MetricsExample.war file inside the project's config/liberty directory.
     ```bash
     $ mvn clean install
     ```
