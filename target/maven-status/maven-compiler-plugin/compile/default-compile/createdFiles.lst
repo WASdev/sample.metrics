@@ -1,4 +1,0 @@
-application/Application.class
-listener/MyHealthCheckServletContextListener.class
-listener/MyMetricsServletContextListener.class
-application/servlet/LibertyServlet.class
