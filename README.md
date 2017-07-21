@@ -1,4 +1,4 @@
-Servlet Sample
+Metrics Sample
 ==============
 
 This project contains a simple Servlet application.
