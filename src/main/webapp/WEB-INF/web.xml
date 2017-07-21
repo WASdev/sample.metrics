@@ -2,20 +2,20 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
                              http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
 	version="3.1">
-	<display-name>Archetype Created Web Application</display-name>
+	<display-name>Web Application</display-name>
 	<listener>
-		<listener-class>com.ibm.listener.MyMetricsServletContextListener</listener-class>
+		<listener-class>listener.MyMetricsServletContextListener</listener-class>
 	</listener>
 	<listener>
-		<listener-class>com.ibm.listener.MyHealthCheckServletContextListener</listener-class>
+		<listener-class>listener.MyHealthCheckServletContextListener</listener-class>
 	</listener>
 	<servlet>
-		<servlet-name>HelloWorldServlet</servlet-name>
-		<servlet-class>com.ibm.servlet.HelloWorldServlet</servlet-class>
+		<servlet-name>LibertyServlet</servlet-name>
+		<servlet-class>application.servlet.LibertyServlet</servlet-class>
 	</servlet>
 	<servlet-mapping>
-		<servlet-name>HelloWorldServlet</servlet-name>
-		<url-pattern>/HelloWorldServlet</url-pattern>
+		<servlet-name>LibertyServlet</servlet-name>
+		<url-pattern>/LibertyServlet</url-pattern>
 	</servlet-mapping>
 	<servlet>
 		<servlet-name>metrics</servlet-name>
