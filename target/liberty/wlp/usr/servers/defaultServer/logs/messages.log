@@ -1,0 +1,72 @@
+********************************************************************************
+product = WebSphere Application Server 17.0.0.2 (wlp-1.0.17.cl170220170523-1818)
+wlp.install.dir = /Users/laura/git/sample.servlet.metrics/target/liberty/wlp/
+java.home = /Library/Java/JavaVirtualMachines/jdk1.8.0_131.jdk/Contents/Home/jre
+java.version = 1.8.0_131
+java.runtime = Java(TM) SE Runtime Environment (1.8.0_131-b11)
+os = Mac OS X (10.12.5; x86_64) (en_GB)
+process = 94766@lauras-mbp.hursley.uk.ibm.com
+********************************************************************************
+[20/07/17 12:06:00:655 BST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0001I: The server defaultServer has been launched.
+[20/07/17 12:06:00:666 BST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0100I: This product is licensed for development, and limited production use. The full license terms can be viewed here: https://public.dhe.ibm.com/ibmdl/export/pub/software/websphere/wasdev/license/base_ilan/ilan/17.0.0.2/lafiles/en.html
+[20/07/17 12:06:01:598 BST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           I CWWKE0002I: The kernel started after 1.144 seconds
+[20/07/17 12:06:01:636 BST] 00000019 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0007I: Feature update started.
+[20/07/17 12:06:02:571 BST] 00000011 com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0007I: The security service is starting...
+[20/07/17 12:06:03:042 BST] 00000011 com.ibm.ws.app.manager.internal.monitor.DropinMonitor        A CWWKZ0058I: Monitoring dropins for applications. 
+[20/07/17 12:06:03:049 BST] 0000001e com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0219I: TCP Channel defaultHttpEndpoint has been started and is now listening for requests on host *  (IPv6) port 9080.
+[20/07/17 12:06:03:506 BST] 00000011 com.ibm.ws.cache.ServerCache                                 I DYNA1001I: WebSphere Dynamic Cache instance named baseCache initialized successfully.
+[20/07/17 12:06:03:508 BST] 00000011 com.ibm.ws.cache.ServerCache                                 I DYNA1071I: The cache provider default is being used.
+[20/07/17 12:06:03:508 BST] 00000011 com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: Dynamic Cache (object cache) initialized successfully.
+[20/07/17 12:06:03:694 BST] 00000014 com.ibm.ws.ssl.config.WSKeyStore                             I CWPKI0802I: Creating the SSL certificate. This may take a few seconds.
+[20/07/17 12:06:03:718 BST] 00000027 com.ibm.ws.security.token.ltpa.internal.LTPAKeyInfoManager   I CWWKS4103I: Creating the LTPA keys. This may take a few seconds.
+[20/07/17 12:06:03:742 BST] 00000011 ibm.ws.security.authentication.internal.jaas.JAASServiceImpl I CWWKS1123I: The collective authentication plugin with class name NullCollectiveAuthenticationPlugin has been activated. 
+[20/07/17 12:06:04:214 BST] 0000002e com.ibm.ws.app.manager.AppMessageHelper                      I CWWKZ0018I: Starting application Metrics Sample.
+[20/07/17 12:06:04:282 BST] 00000027 com.ibm.ws.security.token.ltpa.internal.LTPAKeyInfoManager   A CWWKS4104A: LTPA keys created in 0.564 seconds. LTPA key file: /Users/laura/git/sample.servlet.metrics/target/liberty/wlp/usr/servers/defaultServer/resources/security/ltpa.keys
+[20/07/17 12:06:04:287 BST] 00000027 com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0008I: The security service is ready.
+[20/07/17 12:06:04:288 BST] 00000027 com.ibm.ws.security.token.ltpa.internal.LTPAKeyCreateTask    I CWWKS4105I: LTPA configuration is ready after 0.572 seconds.
+[20/07/17 12:06:04:701 BST] 0000002c com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: ibm/api.
+[20/07/17 12:06:04:701 BST] 0000002d com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: IBMJMXConnectorREST.
+[20/07/17 12:06:04:705 BST] 0000002c com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module ibm/api has been bound to default_host.
+[20/07/17 12:06:04:705 BST] 0000002d com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module IBMJMXConnectorREST has been bound to default_host.
+[20/07/17 12:06:04:706 BST] 0000002c com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://lauras-mbp.hursley.uk.ibm.com:9080/ibm/api/
+[20/07/17 12:06:04:721 BST] 0000002d com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://lauras-mbp.hursley.uk.ibm.com:9080/IBMJMXConnectorREST/
+[20/07/17 12:06:04:808 BST] 0000002e com.ibm.ws.session.WASSessionCore                            I SESN8501I: The session manager did not find a persistent storage location; HttpSession objects will be stored in the local application server's memory.
+[20/07/17 12:06:04:824 BST] 0000002e com.ibm.ws.webcontainer.osgi.webapp.WebGroup                 I SRVE0169I: Loading Web Module: Web Application.
+[20/07/17 12:06:04:824 BST] 0000002e com.ibm.ws.webcontainer                                      I SRVE0250I: Web Module Web Application has been bound to default_host.
+[20/07/17 12:06:04:825 BST] 0000002e com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0016I: Web application available (default_host): http://lauras-mbp.hursley.uk.ibm.com:9080/MetricsExample/
+[20/07/17 12:06:04:827 BST] 0000002e com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0001I: Application Metrics Sample started in 0.613 seconds.
+[20/07/17 12:06:04:856 BST] 00000019 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0012I: The server installed the following features: [jsp-2.3, servlet-3.1, restConnector-2.0, ssl-1.0, monitor-1.0, jndi-1.0, json-1.0, com.ibm.websphere.appserver.autoRestConnector-2.0, distributedMap-1.0, el-3.0].
+[20/07/17 12:06:04:856 BST] 00000019 com.ibm.ws.kernel.feature.internal.FeatureManager            I CWWKF0008I: Feature update completed in 3.260 seconds.
+[20/07/17 12:06:04:857 BST] 00000019 com.ibm.ws.kernel.feature.internal.FeatureManager            A CWWKF0011I: The server defaultServer is ready to run a smarter planet.
+[20/07/17 12:06:04:875 BST] 0000001c com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/ibm/api
+[20/07/17 12:06:04:874 BST] 0000001f com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/IBMJMXConnectorREST
+[20/07/17 12:06:04:985 BST] 0000001c com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[20/07/17 12:06:05:009 BST] 0000001f com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[20/07/17 12:06:05:012 BST] 0000001e com.ibm.ws.session.WASSessionCore                            I SESN0176I: A new session context will be created for application key default_host/MetricsExample
+[20/07/17 12:06:05:012 BST] 0000001e com.ibm.ws.util                                              I SESN0172I: The session manager is using the Java default SecureRandom implementation for session ID generation.
+[20/07/17 12:06:05:114 BST] 00000014 com.ibm.ws.ssl.config.WSKeyStore                             A CWPKI0803A: SSL certificate created in 1.420 seconds. SSL key file: /Users/laura/git/sample.servlet.metrics/target/liberty/wlp/usr/servers/defaultServer/resources/security/key.jks
+[20/07/17 12:06:05:186 BST] 0000001f com.ibm.ws.cache.CacheServiceImpl                            I DYNA1056I: Dynamic Cache (object cache) initialized successfully.
+[20/07/17 12:06:05:255 BST] 0000001e SystemErr                                                    R SLF4J: Failed to load class "org.slf4j.impl.StaticLoggerBinder".
+[20/07/17 12:06:05:264 BST] 0000001e SystemErr                                                    R SLF4J: Defaulting to no-operation (NOP) logger implementation
+[20/07/17 12:06:05:265 BST] 0000001e SystemErr                                                    R SLF4J: See http://www.slf4j.org/codes.html#StaticLoggerBinder for further details.
+[20/07/17 12:06:05:286 BST] 0000002e com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0219I: TCP Channel defaultHttpEndpoint-ssl has been started and is now listening for requests on host *  (IPv6) port 9443.
+[20/07/17 12:06:05:296 BST] 0000002e com.ibm.ws.jmx.connector.server.rest.RESTAppListener         I CWWKX0103I: The JMX REST connector is running and is available at the following service URL: service:jmx:rest://lauras-mbp.hursley.uk.ibm.com:9443/IBMJMXConnectorREST
+[20/07/17 12:06:05:299 BST] 0000002e com.ibm.ws.jmx.connector.server.rest.RESTAppListener         I CWWKX0103I: The JMX REST connector is running and is available at the following service URL: service:jmx:rest://lauras-mbp.hursley.uk.ibm.com:9443/IBMJMXConnectorREST
+[20/07/17 12:06:05:308 BST] 0000001f com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [com.ibm.ws.jmx.connector.server.rest] [/IBMJMXConnectorREST] [JMXRESTProxyServlet]: Initialization successful.
+[20/07/17 12:06:05:325 BST] 00000023 com.ibm.ws.webcontainer.osgi.mbeans.PluginGenerator          I SRVE9103I: A configuration file for a web server plugin was automatically generated for this server at /Users/laura/git/sample.servlet.metrics/target/liberty/wlp/usr/servers/defaultServer/logs/state/plugin-cfg.xml.
+[20/07/17 12:06:06:252 BST] 0000001f SystemOut                                                    O Servlet application.servlet.LibertyServlet has started.
+[20/07/17 12:06:06:265 BST] 0000001f com.ibm.ws.webcontainer.servlet                              I SRVE0242I: [Metrics Sample] [/MetricsExample] [application.servlet.LibertyServlet]: Initialization successful.
+[20/07/17 12:06:06:572 BST] 0000000f com.ibm.ws.kernel.launch.internal.ServerCommandListener      A CWWKE0055I: Server shutdown requested on Thursday, 20 July 2017 at 12:06. The server defaultServer is shutting down.
+[20/07/17 12:06:06:574 BST] 00000033 com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  A CWWKE1100I: Waiting for up to 30 seconds for the server to quiesce.
+[20/07/17 12:06:06:578 BST] 00000034 com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel defaultHttpEndpoint-ssl has stopped listening for requests on host *  (IPv6) port 9443.
+[20/07/17 12:06:06:582 BST] 00000034 com.ibm.ws.tcpchannel.internal.TCPChannel                    I CWWKO0220I: TCP Channel defaultHttpEndpoint has stopped listening for requests on host *  (IPv6) port 9080.
+[20/07/17 12:06:06:582 BST] 00000034 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://lauras-mbp.hursley.uk.ibm.com:9080/ibm/api/
+[20/07/17 12:06:06:582 BST] 00000034 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://lauras-mbp.hursley.uk.ibm.com:9080/IBMJMXConnectorREST/
+[20/07/17 12:06:06:582 BST] 00000034 com.ibm.ws.http.internal.VirtualHostImpl                     A CWWKT0017I: Web application removed (default_host): http://lauras-mbp.hursley.uk.ibm.com:9080/MetricsExample/
+[20/07/17 12:06:06:584 BST] 00000033 com.ibm.ws.runtime.update.internal.RuntimeUpdateManagerImpl  I CWWKE1101I: Server quiesce complete.
+[20/07/17 12:06:06:604 BST] 0000001b com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [Metrics Sample] [/MetricsExample] [application.servlet.LibertyServlet]: Destroy successful.
+[20/07/17 12:06:06:613 BST] 0000001b com.ibm.ws.app.manager.AppMessageHelper                      A CWWKZ0009I: The application Metrics Sample has stopped successfully.
+[20/07/17 12:06:06:636 BST] 00000033 com.ibm.ws.webcontainer.servlet                              I SRVE0253I: [com.ibm.ws.jmx.connector.server.rest] [/IBMJMXConnectorREST] [JMXRESTProxyServlet]: Destroy successful.
+[20/07/17 12:06:06:780 BST] 00000033 com.ibm.ws.security.ready.internal.SecurityReadyServiceImpl  I CWWKS0009I: The security service has stopped.
+[20/07/17 12:06:06:789 BST] 00000033 ibm.ws.security.authentication.internal.jaas.JAASServiceImpl I CWWKS1124I: The collective authentication plugin with class name NullCollectiveAuthenticationPlugin has been deactivated. 
+[20/07/17 12:06:07:037 BST] 00000001 com.ibm.ws.kernel.launch.internal.FrameworkManager           A CWWKE0036I: The server defaultServer stopped after 6.583 seconds.
