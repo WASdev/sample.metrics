@@ -2,7 +2,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	
+
 	<parent>
         <groupId>net.wasdev.wlp.maven.parent</groupId>
         <artifactId>liberty-maven-app-parent</artifactId>
@@ -13,7 +13,7 @@
 	<artifactId>MetricsSample</artifactId>
 	<version>1</version>
 	<packaging>war</packaging>
-	
+
 	<licenses>
 		<license>
 			<name>The Apache Software License, Version 2.0</name>
@@ -82,11 +82,6 @@
         <artifactId>metrics-core</artifactId>
         <version>3.2.2</version>
     </dependency>
-    		<dependency>
-		    <groupId>io.dropwizard.metrics</groupId>
-		    <artifactId>metrics-servlets</artifactId>
-		    <version>3.1.0</version>
-		</dependency>
 	</dependencies>
 
 	<build>
@@ -169,13 +164,13 @@
             </goals>
             <configuration>
               <outputDirectory>${basedir}/target/extra-resources</outputDirectory>
-              <resources>          
+              <resources>
                 <resource>
                   <directory>src/non-packaged-resources</directory>
                   <filtering>true</filtering>
                 </resource>
-              </resources>              
-            </configuration>            
+              </resources>
+            </configuration>
           </execution>
         </executions>
       </plugin>
