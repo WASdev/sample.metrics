@@ -13,9 +13,6 @@ COPY	collectd.conf /etc/collectd/collectd.conf
 # Copy the JMX metrics java plugin for collectd to the docker image
 COPY jmx-metrics.conf /etc/collectd/collectd.conf.d
 
-# Copy the curl_json java plugin for collectd to the docker image
-COPY curl-json.conf /etc/collectd/collectd.conf.d
-
 # Create directories to store external dependent libraries and keys
 RUN mkdir	/clients
 RUN mkdir	/keys

@@ -12,7 +12,7 @@
  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
  * See the License for the specific language governing permissions and
  * limitations under the License.
- *******************************************************************************/ 
+ *******************************************************************************/
 package application.servlet;
 
 import java.io.IOException;
@@ -28,7 +28,10 @@ import com.codahale.metrics.JmxReporter;
 import com.codahale.metrics.MetricRegistry;
 import com.codahale.metrics.Timer;
 
-@WebServlet(urlPatterns="/servlet")
+@WebServlet(name = "servlet",
+    description = "A sample metrics servlet",
+    urlPatterns = {"/servlet"}
+)
 public class LibertyServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
@@ -47,7 +50,7 @@ public class LibertyServlet extends HttpServlet {
         final JmxReporter reporter = JmxReporter.forRegistry(METRIC_REGISTRY).build();
         reporter.start();
 }
-    
+
     /**
      * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
      */
@@ -63,6 +66,6 @@ public class LibertyServlet extends HttpServlet {
         response.getWriter().println(String.format("Time to process the request: %fms", timer1.getMeanRate()));
     }
 
-    
+
 
 }
