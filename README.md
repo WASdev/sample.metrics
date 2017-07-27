@@ -3,33 +3,50 @@ Metrics Sample
 
 This project contains a simple Servlet application that has been customised to emit metrics from the [WebSphere Liberty](https://developer.ibm.com/wasdev/websphere-liberty/) server and the app using the [Dropwizard Metrics API](http://www.dropwizard.io/). The sample also demonstrates (using Docker containers) how to monitor your Liberty metrics using [collectd](https://collectd.org/), [Graphite](https://graphiteapp.org/), and [Grafana](https://grafana.com/).
 
-## Running the Liberty app in Eclipse
-
-1. Download and install [Eclipse with the WebSphere Developer Tools](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/).
-2. Create a new Liberty Profile Server. See [step 3](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/) for details.
-3. Clone this repository.
-4. Import the sample into Eclipse using *File -> Import -> Maven -> Existing Maven Projects* option.
-5. Right click on the project and go to *Properties > Project Facets* and select *Dynamic Web Module* (if not already selected).
-6. Deploy the sample into Liberty server. Right click on the *servlet* sample and select *Run As -> Run on Server* option. Find and select the Liberty profile server and press *Finish*. 
-7. Go to: [http://localhost:9080/servlet](http://localhost:9080/servlet)
-
 ## Running with Maven
 
-This project can be built with Apache Maven. The project uses Liberty Maven Plug-in to automatically download and install Liberty with Java EE7 Web Profile runtime from Maven Central. Liberty Maven Plug-in is also used to create, configure, and run the application on the Liberty server. 
+To run the entire demonstration:
 
-Use the following steps to run the application with Maven:
-
-1. Execute full Maven build. This will cause Liberty Maven Plug-in to download and install Liberty server.
+1. Make sure you have installed Java 8, Docker, and Maven.
+2. Clone this repository to your local harddrive:
     ```bash
-    $ mvn clean install
+    git clone https://github.com/WASdev/sample.metrics.git
     ```
-
-2. To run the server with the sample:
+3. Change to the `sample.metrics` directory:
     ```bash
-    $ mvn liberty:run-server
+    cd sample.metrics
     ```
+4. Build the sample:
+    ```bash
+    mvn clean install
+    ```
+5. Build the Liberty Docker image:
+    ```bash
+    docker build -t example:liberty .
+    ```
+6. Run the Liberty Docker image:
+    ```bash
+    docker run --name liberty -d -p 9080:9080 -p 9443:9443 example:liberty
+    ```
+7. Check that the application is running in a browser at http://localhost:9080/MetricsExample
+8. Change to the `collectd` directory:
+    ```bash
+    cd collectd
+    ```
+9. Change the permissions on the bash script in the directory then run the script:
+    ```bash
+    chmod 755 collectd_graphite_setup.sh
+    ./collectd_graphite_setup.sh
+    ```
+    (This copies some files collectd needs from the running Liberty container, builds a collectd Docker image, runs a Graphite Docker container from DockerHub, and runs the collectd Docker container.
+10. Check that the Graphite application is running and displaying metrics in a browser at http://localhost:80
+11. If you want to display the metrics in Grafana:
+    ```bash
+    docker run -i --name grafana -d -p 3000:3000 --link graphite grafana/grafana
+    ```
+12. Open Grafana in a browser: http://localhost:3000
+13. Add the Graphite server as a data source in Grafana and then import the provided dashboard from `sample.metrics/grafana/MetricsSampleDashboard.json`.
 
-Once the server is running, the application will be available under [http://localhost:9080/MetricsExample](http://localhost:9080/MetricsExample).
 
 # Notice
 
