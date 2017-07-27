@@ -191,7 +191,7 @@
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "MetricsSample - JVMStats - ProcessCPU",
+          "title": "LibertyServer - JVMStats - ProcessCPU",
           "tooltip": {
             "shared": true,
             "sort": 0,
@@ -264,7 +264,7 @@
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "MetricsSample - JVMStats - FreeMemory",
+          "title": "LibertyServer - JVMStats - FreeMemory",
           "tooltip": {
             "shared": true,
             "sort": 0,
@@ -349,7 +349,7 @@
           "thresholds": [],
           "timeFrom": null,
           "timeShift": null,
-          "title": "MetricsSample - ThreadPoolStats - PoolSize",
+          "title": "LibertyServer - ThreadPoolStats - PoolSize",
           "tooltip": {
             "shared": true,
             "sort": 0,
