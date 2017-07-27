@@ -1,9 +1,9 @@
 Metrics Sample
 ==============
 
-This project contains a simple Servlet application.
+This project contains a simple Servlet application that has been customised to emit metrics from the [WebSphere Liberty](https://developer.ibm.com/wasdev/websphere-liberty/) server and the app using the [Dropwizard Metrics API](http://www.dropwizard.io/. The sample also demonstrates (using Docker containers) how to monitor your Liberty metrics using [collectd](https://collectd.org/), [Graphite](https://graphiteapp.org/), and [Grafana](https://grafana.com/).
 
-## Running in Eclipse
+## Running the Liberty app in Eclipse
 
 1. Download and install [Eclipse with the WebSphere Developer Tools](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/).
 2. Create a new Liberty Profile Server. See [step 3](https://developer.ibm.com/wasdev/downloads/liberty-profile-using-eclipse/) for details.
@@ -19,23 +19,17 @@ This project can be built with Apache Maven. The project uses Liberty Maven Plug
 
 Use the following steps to run the application with Maven:
 
-1. Execute full Maven build. This will cause Liberty Maven Plug-in to download and install Liberty profile server.
+1. Execute full Maven build. This will cause Liberty Maven Plug-in to download and install Liberty server.
     ```bash
     $ mvn clean install
     ```
 
-2. To run the server with the Servlet sample execute:
+2. To run the server with the sample:
     ```bash
     $ mvn liberty:run-server
     ```
 
-Once the server is running, the application will be available under [http://localhost:9080/servlet](http://localhost:9080/servlet).
-
-## Deploying to Bluemix
-
-Click the button below to deploy your own copy of this application to [Bluemix](https://bluemix.net).
-
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/WASdev/sample.servlet.git)
+Once the server is running, the application will be available under [http://localhost:9080/MetricsExample](http://localhost:9080/MetricsExample).
 
 # Notice
 
