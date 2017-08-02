@@ -3,6 +3,8 @@ Metrics Sample
 
 This project contains a simple Servlet application that has been customised to emit metrics from the [WebSphere Liberty](https://developer.ibm.com/wasdev/websphere-liberty/) server and the app using the [Dropwizard Metrics API](http://www.dropwizard.io/). The sample also demonstrates (using Docker containers) how to monitor your Liberty metrics using [collectd](https://collectd.org/), [Graphite](https://graphiteapp.org/), and [Grafana](https://grafana.com/).
 
+The instructions below are minimal so that you can just get the sample running. For more detail and for instructions on how to add metrics to a servlet application, check out [this article on WASdev.net](https://developer.ibm.com/wasdev/docs/collect-metrics-from-liberty-apps-and-display-in-grafana/).
+
 ## Running with Maven
 
 To run the entire demonstration:
